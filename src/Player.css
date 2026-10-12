@@ -1,0 +1,9 @@
+.player {
+  height: 100vh;
+  background-color: black;
+}
+
+.player__body {
+  display: flex;
+  height: 100%;
+}

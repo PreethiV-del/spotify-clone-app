@@ -1,0 +1,166 @@
+.footer {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+  height: 90px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #000;
+  padding: 10px 16px;
+  color: white;
+  z-index: 1000;
+}
+
+/* LEFT SECTION: album cover and song details */
+.footer__left {
+  flex: 0 0 30%;
+  display: flex;
+  align-items: center;
+  color: white;
+  min-width: 0;
+  gap: 12px;
+}
+
+.footer__musicImage {
+  height: 60px;
+  width: 60px;
+  margin-right: 0;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.footer__songInfo {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  min-width: 0;
+}
+
+.footer__songInfo > h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.footer__songInfo > p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #b3b3b3;
+  white-space: nowrap;
+}
+
+.footer__green {
+  color: #1ed760;
+  flex-shrink: 0;
+}
+
+/* CENTER SECTION: playback controls */
+.footer__center {
+  flex: 1;
+  padding: 0 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  max-width: 650px;
+  min-width: 0;
+}
+
+.footer__icon,
+.footer__green {
+  cursor: pointer;
+}
+
+.footer__icon {
+  color: #b3b3b3;
+}
+
+.footer__icon:hover,
+.footer__green:hover {
+  transition: transform 0.2s ease-in-out;
+  transform: scale(1.15);
+}
+
+.footer__center > .MuiSvgIcon-root:nth-child(3) {
+  color: white;
+  font-size: 48px;
+}
+
+/* RIGHT SECTION: volume and extra controls */
+.footer__right {
+  flex: 0 0 25%;
+  max-width: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: white;
+  padding-left: 12px;
+}
+
+.footer__right .MuiGrid-root {
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.footer__right .MuiSvgIcon-root {
+  color: #b3b3b3;
+}
+
+.footer__right .MuiSlider-root {
+  width: 100px;
+  color: #fff;
+}
+
+.footer__right .MuiSlider-thumb {
+  width: 12px;
+  height: 12px;
+}
+
+.footer__right .MuiSlider-rail {
+  opacity: 0.5;
+}
+
+/* SMALL SCREENS */
+@media (max-width: 750px) {
+  .footer {
+    height: 80px;
+    padding: 8px 10px;
+  }
+
+  .footer__left {
+    flex: 0 0 40%;
+    gap: 8px;
+  }
+
+  .footer__musicImage {
+    width: 45px;
+    height: 45px;
+  }
+
+  .footer__songInfo > h4 {
+    font-size: 12px;
+  }
+
+  .footer__songInfo > p {
+    font-size: 11px;
+  }
+
+  .footer__center {
+    gap: 10px;
+    padding: 0 5px;
+  }
+
+  .footer__center > .MuiSvgIcon-root:nth-child(3) {
+    font-size: 36px;
+  }
+
+  .footer__right {
+    display: none;
+  }
+}
